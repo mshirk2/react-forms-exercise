@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const NewBoxForm = ({addBox}) => {
     const INITIAL_STATE = {
-        backgroundColor: '',
-        width: '',
-        height: ''
-    }
+        backgroundColor: "",
+        width: "",
+        height: ""
+    };
     const [formData, setFormData] = useState(INITIAL_STATE);
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -13,12 +13,12 @@ const NewBoxForm = ({addBox}) => {
             ...formData,
             [name]: value
         }))
-    }
+    };
     const handleSubmit = (e) => {
         e.preventDefault();
         addBox({...formData});
         setFormData(INITIAL_STATE);
-    }
+    };
 
     return (
         <form onSubmit={handleSubmit}>
@@ -28,7 +28,7 @@ const NewBoxForm = ({addBox}) => {
                 type="color"
                 name="backgroundColor"
                 placeholder="Color"
-                value={formData.name}
+                value={formData.backgroundColor}
                 onChange={handleChange}
             />
             <label htmlFor="width">Width</label>
@@ -37,7 +37,7 @@ const NewBoxForm = ({addBox}) => {
                 type="number"
                 name="width"
                 placeholder="Width"
-                value={formData.name}
+                value={formData.width}
                 onChange={handleChange}
             />
             <label htmlFor="height">Height</label>
@@ -46,7 +46,7 @@ const NewBoxForm = ({addBox}) => {
                 type="number"
                 name="height"
                 placeholder="Height"
-                value={formData.name}
+                value={formData.height}
                 onChange={handleChange}
             />
             <button>Make Box</button>
