@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NewBoxForm = ({addBox}) => {
     const INITIAL_STATE = {
         backgroundColor: '',
         width: '',
-        height: '',
+        height: ''
     }
     const [formData, setFormData] = useState(INITIAL_STATE);
     const handleChange = (e) => {
@@ -17,12 +17,12 @@ const NewBoxForm = ({addBox}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         addBox({...formData});
-        setFpr,Data(INITIAL_STATE);
+        setFormData(INITIAL_STATE);
     }
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="backgroundColor">Background Color</label>
+            <label htmlFor="backgroundColor">Color</label>
             <input
                 id="backgroundColor"
                 type="color"
