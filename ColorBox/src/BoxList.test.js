@@ -42,7 +42,7 @@ it("adds new box", function () {
     const removeButton = boxList.getByText("X");
 
     expect(removeButton).toBeTruthy();
-    expect(removeButton.previousSibling).toHaveProperty('style.background-color', 'rgb(5, 25, 30)');
+    expect(removeButton.previousSibling).toHaveProperty('style.background', 'rgb(5, 25, 30)');
     expect(removeButton.previousSibling).toHaveProperty('style.width', '2em');
     expect(removeButton.previousSibling).toHaveProperty('style.height', '3em');
 });

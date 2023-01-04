@@ -34,7 +34,10 @@ it("adds new todo", function () {
     const removeButton = todoList.getByText("X");
 
     expect(removeButton).toBeTruthy();
-    expect(removeButton.previousSibling).toContain('make working app');
+
+    const task = todoList.getByText('make working app');
+
+    expect(task).toBeTruthy();
 });
 
 it("clears inputs after adding todo", function () {

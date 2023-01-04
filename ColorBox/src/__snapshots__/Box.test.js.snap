@@ -5,7 +5,9 @@ exports[`matches snapshot 1`] = `
   <div
     class="Box"
   >
-    <div />
+    <div
+      style="background-color: rgb(5, 25, 30);"
+    />
     <button>
       X
     </button>

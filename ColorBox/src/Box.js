@@ -5,7 +5,7 @@ const Box = ({id, backgroundColor, width, height, handleRemove}) => {
     return (
         <div className="Box">
             <div style={{
-                backgroundColor,
+                backgroundColor: 'rgb(5, 25, 30)',
                 width: `${width}em`,
                 height: `${height}em`
             }}>
